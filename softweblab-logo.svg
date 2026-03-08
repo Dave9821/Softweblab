@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D5016"/>
+      <stop offset="100%" style="stop-color:#7BAE5C"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A8C97F"/>
+      <stop offset="100%" style="stop-color:#4A7C2F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon Box -->
+  <rect x="0" y="8" width="64" height="64" rx="14" fill="url(#iconGrad)"/>
+
+  <!-- Circuit/Tech lines inside box -->
+  <line x1="12" y1="40" x2="52" y2="40" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <line x1="32" y1="16" x2="32" y2="64" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+  <!-- Leaf shape — nature meets tech -->
+  <path d="M32 18 C44 18 54 28 54 40 C54 52 44 58 32 54 C20 58 10 52 10 40 C10 28 20 18 32 18 Z" 
+        fill="url(#leafGrad)" opacity="0.9"/>
+
+  <!-- Stem -->
+  <line x1="32" y1="54" x2="32" y2="64" stroke="#A8C97F" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Circuit dots on leaf -->
+  <circle cx="32" cy="32" r="3" fill="white" opacity="0.95"/>
+  <circle cx="22" cy="40" r="2" fill="white" opacity="0.7"/>
+  <circle cx="42" cy="40" r="2" fill="white" opacity="0.7"/>
+  <circle cx="26" cy="26" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="38" cy="26" r="1.5" fill="white" opacity="0.6"/>
+
+  <!-- Connecting lines inside leaf -->
+  <line x1="32" y1="32" x2="22" y2="40" stroke="white" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+  <line x1="32" y1="32" x2="42" y2="40" stroke="white" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+  <line x1="32" y1="32" x2="26" y2="26" stroke="white" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+  <line x1="32" y1="32" x2="38" y2="26" stroke="white" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- SOFTWEBLAB text -->
+  <!-- "Soft" in dark green -->
+  <text x="78" y="38" 
+        font-family="Georgia, 'Times New Roman', serif" 
+        font-size="22" 
+        font-weight="700" 
+        fill="#2D5016"
+        letter-spacing="0.5">Soft</text>
+
+  <!-- "Web" in medium green -->
+  <text x="120" y="38" 
+        font-family="Georgia, 'Times New Roman', serif" 
+        font-size="22" 
+        font-weight="700" 
+        fill="#4A7C2F"
+        letter-spacing="0.5">Web</text>
+
+  <!-- "Lab" in sage -->
+  <text x="162" y="38" 
+        font-family="Georgia, 'Times New Roman', serif" 
+        font-size="22" 
+        font-weight="700" 
+        fill="#7BAE5C"
+        letter-spacing="0.5">Lab</text>
+
+  <!-- Tagline -->
+  <text x="78" y="56" 
+        font-family="Arial, sans-serif" 
+        font-size="9.5" 
+        fill="#8B9E7A"
+        letter-spacing="2.5"
+        font-weight="500">IT SERVICES &amp; DIGITAL SOLUTIONS</text>
+
+  <!-- Thin accent line under logo text -->
+  <line x1="78" y1="61" x2="210" y2="61" stroke="#A8C97F" stroke-width="1" opacity="0.5"/>
+</svg>
