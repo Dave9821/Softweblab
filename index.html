@@ -1184,18 +1184,24 @@
     bottom: 28px;
     right: 28px;
     z-index: 2000;
-    width: 60px; height: 60px;
-    background: linear-gradient(135deg, var(--forest), var(--moss));
+    width: 62px; height: 62px;
+    background: linear-gradient(135deg, #1A2810, #4A7C2F);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 6px 24px rgba(45,80,22,0.4);
+    box-shadow: 0 6px 30px rgba(45,80,22,0.5), 0 0 0 0 rgba(123,174,92,0.4);
     transition: all 0.3s;
-    font-size: 1.5rem;
-    border: none;
+    font-size: 1.4rem;
+    border: 2px solid rgba(168,201,127,0.3);
     color: white;
+    animation: chatPulse 3s infinite;
+  }
+  @keyframes chatPulse {
+    0% { box-shadow: 0 6px 30px rgba(45,80,22,0.5), 0 0 0 0 rgba(123,174,92,0.4); }
+    70% { box-shadow: 0 6px 30px rgba(45,80,22,0.5), 0 0 0 12px rgba(123,174,92,0); }
+    100% { box-shadow: 0 6px 30px rgba(45,80,22,0.5), 0 0 0 0 rgba(123,174,92,0); }
   }
 
   .chat-btn:hover {
@@ -1231,7 +1237,7 @@
     flex-direction: column;
     overflow: hidden;
     animation: slideUp 0.3s ease;
-    max-height: 520px;
+    max-height: 560px;
   }
 
   .chatbox.open { display: flex; }
@@ -1242,12 +1248,13 @@
   }
 
   .chat-header {
-    background: linear-gradient(135deg, var(--forest), var(--moss));
-    padding: 18px 20px;
+    background: linear-gradient(135deg, #1A2810, #2D5016);
+    padding: 16px 20px;
     display: flex;
     align-items: center;
     gap: 12px;
     color: white;
+    border-bottom: 1px solid rgba(168,201,127,0.2);
   }
 
   .chat-header-avatar {
@@ -1283,7 +1290,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-height: 320px;
+    max-height: 340px;
   }
 
   .chat-msg {
@@ -2113,51 +2120,63 @@
 </footer>
 
 <!-- ===== CHATBOT ===== -->
-<button class="chat-btn" aria-label="Open chat assistant" data-action="toggleChat">
-  💬
+<button class="chat-btn" aria-label="Open Nova AI Assistant" data-action="toggleChat">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="white" opacity="0"/>
+    <circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/>
+    <path d="M8 12l2 2 4-4" stroke="white" stroke-width="0" stroke-linecap="round"/>
+    <text x="12" y="16" text-anchor="middle" fill="white" font-size="13" font-family="Arial">✦</text>
+  </svg>
   <div class="chat-dot"></div>
 </button>
 
 <div class="chatbox" id="chatbox">
   <div class="chat-header">
-    <div class="chat-header-avatar">🤖</div>
+    <div class="chat-header-avatar" style="background:rgba(255,255,255,0.15);font-size:1.2rem;">✦</div>
     <div class="chat-header-info">
-      <h4>SoftWebLab Assistant</h4>
-      <span>🟢 Online — typically replies instantly</span>
+      <h4>Nova <span style="font-size:0.7rem;background:rgba(255,255,255,0.2);padding:2px 8px;border-radius:50px;margin-left:6px;font-weight:400;">AI Assistant</span></h4>
+      <span>🟢 Online · Powered by SoftWebLab</span>
     </div>
     <button class="chat-close" data-action="toggleChat">✕</button>
   </div>
 
   <div class="chat-messages" id="chatMessages">
-    <div class="chat-msg bot">
-      👋 Hi there! I'm your SoftWebLab assistant. How can I help you today?
+    <div class="chat-msg bot" style="background:linear-gradient(135deg,#e8f5d8,#d4e9b8);border-left:3px solid #4A7C2F;">
+      ✦ Hi! I'm <strong>Nova</strong>, SoftWebLab's AI assistant.<br><br>I can help you with services, pricing, appointments, and more. What can I do for you today?
     </div>
   </div>
 
-  <div class="chat-suggestions" id="suggestions">
-    <button class="chat-suggestion" data-action="quickReply" data-reply="What services do you offer?">Our Services</button>
-    <button class="chat-suggestion" data-action="quickReply" data-reply="How much does a website cost?">Pricing</button>
-    <button class="chat-suggestion" data-action="quickReply" data-reply="I want to start a project">Start a Project</button>
-    <button class="chat-suggestion" data-action="quickReply" data-reply="Do you offer IT support?">IT Support</button>
+  <div class="chat-suggestions" id="suggestions" style="padding:10px 14px 8px;">
+    <button class="chat-suggestion" data-action="quickReply" data-reply="What services do you offer?">🌐 Services</button>
+    <button class="chat-suggestion" data-action="quickReply" data-reply="Tell me about pricing">💰 Pricing</button>
+    <button class="chat-suggestion" data-action="quickReply" data-reply="I want to book a callback">📞 Book Call</button>
+    <button class="chat-suggestion" data-action="quickReply" data-reply="Chat on WhatsApp">💬 WhatsApp</button>
+    <button class="chat-suggestion" data-action="quickReply" data-reply="I have a question">❓ FAQ</button>
+  </div>
+
+  <div id="leadForm" style="display:none;padding:12px 16px;background:#f4f8ee;border-top:1px solid rgba(123,174,92,0.2);">
+    <p style="font-size:0.78rem;color:#4A7C2F;font-weight:600;margin-bottom:8px;">✦ Quick Details — We'll call you back!</p>
+    <input id="leadName" placeholder="Your Name" style="width:100%;padding:8px 12px;border:1.5px solid rgba(123,174,92,0.3);border-radius:8px;font-size:0.82rem;margin-bottom:8px;outline:none;font-family:DM Sans,sans-serif;"/>
+    <input id="leadPhone" placeholder="Phone Number" style="width:100%;padding:8px 12px;border:1.5px solid rgba(123,174,92,0.3);border-radius:8px;font-size:0.82rem;margin-bottom:8px;outline:none;font-family:DM Sans,sans-serif;"/>
+    <input id="leadEmail" placeholder="Email Address" style="width:100%;padding:8px 12px;border:1.5px solid rgba(123,174,92,0.3);border-radius:8px;font-size:0.82rem;margin-bottom:8px;outline:none;font-family:DM Sans,sans-serif;"/>
+    <button data-action="submitLead" style="width:100%;padding:10px;background:linear-gradient(135deg,#2D5016,#4A7C2F);color:white;border:none;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:DM Sans,sans-serif;">Request Callback ✦</button>
   </div>
 
   <div class="chat-input-area">
-    <input class="chat-input" id="chatInput" placeholder="Type a message..." >
-    <button class="chat-send" data-action="sendChatMsg">➤</button>
+    <input class="chat-input" id="chatInput" placeholder="Ask Nova anything..." data-keyaction="handleKey">
+    <button class="chat-send" data-action="sendChatMsg">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
   </div>
 </div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Run immediately before anything else
-  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
-  window.scrollTo(0, 0);
-  document.documentElement.scrollTop = 0;
-
 (function() {
-  // Ensure top on load
+  if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
   window.addEventListener('load', function() { window.scrollTo(0, 0); });
   document.addEventListener('DOMContentLoaded', function() { window.scrollTo(0, 0); });
 
+  // ===== PAGE NAVIGATION =====
   function showPage(name) {
     document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
     var pg = document.getElementById('page-' + name);
@@ -2167,10 +2186,12 @@
     if (navEl) navEl.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
   window.addEventListener('scroll', function() {
     var nav = document.getElementById('navbar');
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
   });
+
   function toggleMenu() {
     var links = document.querySelector('.nav-links');
     if (!links) return;
@@ -2193,6 +2214,8 @@
       links.setAttribute('data-open', 'true');
     }
   }
+
+  // ===== CONTACT FORM =====
   function submitForm() {
     var fname = document.getElementById('fname').value;
     var lname = document.getElementById('lname').value;
@@ -2200,72 +2223,109 @@
     var phone = document.getElementById('phone').value;
     var service = document.getElementById('service').value;
     var message = document.getElementById('message').value;
-
-    if (!fname || !email || !message) {
-      alert('Please fill in required fields (Name, Email, Message).');
-      return;
-    }
-
+    if (!fname || !email || !message) { alert('Please fill in required fields (Name, Email, Message).'); return; }
     var btn = document.querySelector('[data-action="submitForm"]');
     if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
-
     var formData = new FormData();
     formData.append('name', fname + ' ' + lname);
     formData.append('email', email);
     formData.append('phone', phone);
     formData.append('service', service);
     formData.append('message', message);
-
     fetch('https://formspree.io/f/xzdjderr', {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(function(response) {
+      method: 'POST', body: formData, headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
       if (response.ok) {
         var msg = document.getElementById('successMsg');
         if (msg) { msg.style.display = 'block'; }
-        ['fname','lname','email','phone','message'].forEach(function(id){
-          var el = document.getElementById(id);
-          if (el) el.value = '';
-        });
-        var sel = document.getElementById('service');
-        if (sel) sel.value = '';
-        if (btn) { btn.textContent = 'Send Message 🌿'; btn.disabled = false; }
+        ['fname','lname','email','phone','message'].forEach(function(id){ var el=document.getElementById(id); if(el) el.value=''; });
+        var sel = document.getElementById('service'); if (sel) sel.value = '';
+        if (btn) { btn.textContent = 'Send Message'; btn.disabled = false; }
         setTimeout(function(){ if (msg) msg.style.display = 'none'; }, 6000);
       } else {
-        alert('Something went wrong. Please email us directly at info@softweblab.net');
-        if (btn) { btn.textContent = 'Send Message 🌿'; btn.disabled = false; }
+        alert('Something went wrong. Please email info@softweblab.net');
+        if (btn) { btn.textContent = 'Send Message'; btn.disabled = false; }
       }
-    })
-    .catch(function() {
-      alert('Network error. Please email us at info@softweblab.net or call +1 312 452 3784');
-      if (btn) { btn.textContent = 'Send Message 🌿'; btn.disabled = false; }
+    }).catch(function() {
+      alert('Network error. Please call +1 312 452 3784');
+      if (btn) { btn.textContent = 'Send Message'; btn.disabled = false; }
     });
   }
+
+  // ===== NOVA AI CHATBOT =====
+  var novaState = { step: null, userName: null };
+
   function toggleChat() {
     var box = document.getElementById('chatbox');
-    if (box) box.classList.toggle('open');
-  }
-  var botReplies = {
-    'what services': 'We offer Web Development, App Development, Digital Marketing, Social Media Marketing, IT Managed Services, and IT Support for small businesses. Which interests you most?',
-    'how much': 'Website development starts at $500. E-commerce and custom platforms are quoted based on requirements. Contact us for a free estimate!',
-    'start a project': 'Excellent! Fill out our contact form and we will get in touch shortly. Taking you there now!',
-    'it support': 'Yes! We offer comprehensive IT support for small businesses including helpdesk, on-site visits, hardware setup, and Office 365 management.',
-    'how long': 'A standard website takes 2-4 weeks, a mobile app 6-12 weeks, and IT setup 1-2 weeks. We always share a clear timeline upfront.',
-    'contact': 'Reach us at info@softweblab.net or call +1 312 452 3784. We respond within 4 hours!',
-    'location': 'We are at 302 West Lane, Chicago, IL. We serve clients across the US remotely too!',
-    'price': 'Web design starts at $500, mobile apps from $3,000, IT support plans from $99/month. Contact us for a custom quote!',
-    'default': 'Thanks for reaching out! Our team is ready at info@softweblab.net or call +1 312 452 3784 for a free consultation.'
-  };
-  function getBotReply(msg) {
-    var lower = msg.toLowerCase();
-    for (var key in botReplies) {
-      if (key !== 'default' && lower.indexOf(key) !== -1) return botReplies[key];
+    if (!box) return;
+    box.classList.toggle('open');
+    if (box.classList.contains('open')) {
+      var msgs = document.getElementById('chatMessages');
+      if (msgs && msgs.children.length <= 1) {
+        setTimeout(function() {
+          addNovaMsg('Before we begin, may I know your name?', 'bot');
+          novaState.step = 'ask_name';
+        }, 600);
+      }
     }
-    return botReplies['default'];
   }
-  function addMsg(text, type) {
+
+  function getNovaReply(msg) {
+    var l = msg.toLowerCase();
+    var name = novaState.userName || 'there';
+    if (l.indexOf('hi') !== -1 || l.indexOf('hello') !== -1 || l.indexOf('hey') !== -1) {
+      return 'Hi ' + name + '! How can I help you today? Ask me about our services, pricing, or book a callback!';
+    }
+    if (l.indexOf('service') !== -1 || l.indexOf('offer') !== -1 || l.indexOf('provide') !== -1) {
+      return 'SoftWebLab offers: Web Development, App Development, Digital Marketing, Social Media Marketing, IT Managed Services, and IT Support for small businesses. Which one interests you?';
+    }
+    if (l.indexOf('pric') !== -1 || l.indexOf('cost') !== -1 || l.indexOf('how much') !== -1 || l.indexOf('rate') !== -1) {
+      return 'Our pricing: Basic Website from $500, Business Website from $1500, E-Commerce from $3000, Mobile App from $3000, Digital Marketing from $300/mo, IT Support from $99/mo. Want a free quote?';
+    }
+    if (l.indexOf('web') !== -1 || l.indexOf('website') !== -1) {
+      return 'We build fast, SEO-optimized websites using React, WordPress and Node.js. Mobile-first design, starting at $500. Timeline 2-4 weeks. Want a free quote?';
+    }
+    if (l.indexOf('app') !== -1 || l.indexOf('mobile') !== -1 || l.indexOf('android') !== -1 || l.indexOf('ios') !== -1) {
+      return 'We create iOS and Android apps using Flutter and React Native. Starting at $3,000, timeline 6-12 weeks. Shall I arrange a callback?';
+    }
+    if (l.indexOf('market') !== -1 || l.indexOf('seo') !== -1 || l.indexOf('social') !== -1 || l.indexOf('smm') !== -1) {
+      return 'Our Digital Marketing services include SEO, Google Ads, Social Media Marketing, Content Marketing and Email Campaigns. Starting at $300/month. Want to know more?';
+    }
+    if (l.indexOf('it support') !== -1 || l.indexOf('helpdesk') !== -1 || l.indexOf('managed') !== -1) {
+      return 'We offer IT Support for small businesses including helpdesk, on-site visits, hardware setup, Office 365 and cybersecurity. Starting at $99/month. Want a free assessment?';
+    }
+    if (l.indexOf('call') !== -1 || l.indexOf('callback') !== -1 || l.indexOf('book') !== -1 || l.indexOf('appoint') !== -1) {
+      var leadForm = document.getElementById('leadForm');
+      if (leadForm) leadForm.style.display = 'block';
+      return 'Sure ' + name + '! Please fill in your details below and our team will call you within 2 business hours.';
+    }
+    if (l.indexOf('whatsapp') !== -1 || l.indexOf('whats app') !== -1) {
+      setTimeout(function() {
+        var container = document.getElementById('chatMessages');
+        if (!container) return;
+        var waBtn = document.createElement('a');
+        waBtn.href = 'https://wa.me/13124523784?text=Hi SoftWebLab, I found you on your website!';
+        waBtn.target = '_blank';
+        waBtn.style.cssText = 'display:inline-block;margin:8px 0;background:#25D366;color:white;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:0.82rem;font-weight:600;';
+        waBtn.textContent = 'Open WhatsApp Chat';
+        container.appendChild(waBtn);
+        container.scrollTop = container.scrollHeight;
+      }, 900);
+      return 'Great! Click the button below to chat with us on WhatsApp directly.';
+    }
+    if (l.indexOf('faq') !== -1 || l.indexOf('question') !== -1) {
+      return 'Common questions: How long does a website take? 2-4 weeks. Do you offer support after launch? Yes! Can you redesign my site? Absolutely! Are you in Chicago? Yes, 302 West Lane Chicago IL. Any specific question?';
+    }
+    if (l.indexOf('contact') !== -1 || l.indexOf('email') !== -1 || l.indexOf('phone') !== -1 || l.indexOf('address') !== -1) {
+      return 'Reach us at: Email: info@softweblab.net | Phone: +1 312 452 3784 | Address: 302 West Lane, Chicago IL | Hours: Mon-Sat 9AM-7PM CST';
+    }
+    if (l.indexOf('thank') !== -1 || l.indexOf('great') !== -1 || l.indexOf('awesome') !== -1) {
+      return 'You are welcome ' + name + '! Is there anything else I can help you with?';
+    }
+    return 'I am here to help! You can ask me about our services, pricing, web development, app development, digital marketing, IT support, or book a callback. What would you like to know?';
+  }
+
+  function addNovaMsg(text, type) {
     var container = document.getElementById('chatMessages');
     if (!container) return;
     var div = document.createElement('div');
@@ -2274,6 +2334,7 @@
     container.appendChild(div);
     container.scrollTop = container.scrollHeight;
   }
+
   function showTyping() {
     var container = document.getElementById('chatMessages');
     if (!container) return;
@@ -2284,31 +2345,58 @@
     container.appendChild(div);
     container.scrollTop = container.scrollHeight;
   }
+
   function removeTyping() { var t = document.getElementById('typing'); if (t) t.remove(); }
+
+  function submitLead() {
+    var name = document.getElementById('leadName').value;
+    var phone = document.getElementById('leadPhone').value;
+    var email = document.getElementById('leadEmail').value;
+    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+    var formData = new FormData();
+    formData.append('name', name);
+    formData.append('phone', phone);
+    formData.append('email', email || 'Not provided');
+    formData.append('message', 'Callback request from Nova chatbot');
+    fetch('https://formspree.io/f/xzdjderr', {
+      method: 'POST', body: formData, headers: { 'Accept': 'application/json' }
+    }).then(function() {
+      document.getElementById('leadForm').style.display = 'none';
+      addNovaMsg('Done! Our team will call ' + name + ' at ' + phone + ' within 2 hours. Anything else?', 'bot');
+    }).catch(function() {
+      addNovaMsg('Please call us at +1 312 452 3784 or email info@softweblab.net', 'bot');
+    });
+  }
+
   function sendChatMsg() {
     var input = document.getElementById('chatInput');
     if (!input) return;
     var text = input.value.trim();
     if (!text) return;
-    addMsg(text, 'user');
+    addNovaMsg(text, 'user');
     input.value = '';
     var sugg = document.getElementById('suggestions');
     if (sugg) sugg.style.display = 'none';
     showTyping();
-    var reply = getBotReply(text);
     setTimeout(function() {
       removeTyping();
-      addMsg(reply, 'bot');
-      if (text.toLowerCase().indexOf('start a project') !== -1 || text.toLowerCase().indexOf('contact') !== -1) {
-        setTimeout(function(){ showPage('contact'); }, 1200);
+      if (novaState.step === 'ask_name') {
+        novaState.userName = text.split(' ')[0];
+        novaState.step = null;
+        addNovaMsg('Great to meet you, ' + novaState.userName + '! I am Nova, SoftWebLab AI assistant. Ask me about services, pricing, or type "book call" to schedule a callback!', 'bot');
+        return;
       }
-    }, 900);
+      addNovaMsg(getNovaReply(text), 'bot');
+    }, 800);
   }
+
   function quickReply(msg) {
     var input = document.getElementById('chatInput');
     if (input) input.value = msg;
     sendChatMsg();
   }
+
+  // ===== EVENT DELEGATION =====
   document.addEventListener('click', function(e) {
     var pageEl = e.target.closest('[data-page]');
     if (pageEl) { showPage(pageEl.getAttribute('data-page')); return; }
@@ -2319,12 +2407,15 @@
       else if (action === 'toggleMenu') toggleMenu();
       else if (action === 'submitForm') submitForm();
       else if (action === 'sendChatMsg') sendChatMsg();
+      else if (action === 'submitLead') submitLead();
       else if (action === 'quickReply') quickReply(actEl.getAttribute('data-reply'));
     }
   });
+
   document.addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && e.target && e.target.id === 'chatInput') sendChatMsg();
   });
+
 })();
 </script>
 </body>
