@@ -1155,6 +1155,11 @@
     font-family: 'DM Sans', sans-serif;
   }
 
+  .form-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
   .form-submit:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(45,80,22,0.3);
@@ -2049,7 +2054,7 @@
         <textarea placeholder="Tell us about your project, goals, or questions..." id="message"></textarea>
       </div>
       <button class="form-submit" data-action="submitForm">Send Message 🌿</button>
-      <div class="success-msg" id="successMsg">✅ Message sent! We'll be in touch within 4 hours.</div>
+      <div class="success-msg" id="successMsg">✅ Message sent successfully! We'll reply to your email within 4 business hours. — Team SoftWebLab</div>
     </div>
   </div>
 
@@ -2190,12 +2195,53 @@
   }
   function submitForm() {
     var fname = document.getElementById('fname').value;
+    var lname = document.getElementById('lname').value;
     var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var service = document.getElementById('service').value;
     var message = document.getElementById('message').value;
-    if (!fname || !email || !message) { alert('Please fill in required fields (Name, Email, Message).'); return; }
-    var msg = document.getElementById('successMsg');
-    if (msg) { msg.style.display = 'block'; setTimeout(function(){ msg.style.display = 'none'; }, 5000); }
-    ['fname','lname','email','phone','message'].forEach(function(id){ var el=document.getElementById(id); if(el) el.value=''; });
+
+    if (!fname || !email || !message) {
+      alert('Please fill in required fields (Name, Email, Message).');
+      return;
+    }
+
+    var btn = document.querySelector('[data-action="submitForm"]');
+    if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
+
+    var formData = new FormData();
+    formData.append('name', fname + ' ' + lname);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('service', service);
+    formData.append('message', message);
+
+    fetch('https://formspree.io/f/xzdjderr', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(response) {
+      if (response.ok) {
+        var msg = document.getElementById('successMsg');
+        if (msg) { msg.style.display = 'block'; }
+        ['fname','lname','email','phone','message'].forEach(function(id){
+          var el = document.getElementById(id);
+          if (el) el.value = '';
+        });
+        var sel = document.getElementById('service');
+        if (sel) sel.value = '';
+        if (btn) { btn.textContent = 'Send Message 🌿'; btn.disabled = false; }
+        setTimeout(function(){ if (msg) msg.style.display = 'none'; }, 6000);
+      } else {
+        alert('Something went wrong. Please email us directly at info@softweblab.net');
+        if (btn) { btn.textContent = 'Send Message 🌿'; btn.disabled = false; }
+      }
+    })
+    .catch(function() {
+      alert('Network error. Please email us at info@softweblab.net or call +1 312 452 3784');
+      if (btn) { btn.textContent = 'Send Message 🌿'; btn.disabled = false; }
+    });
   }
   function toggleChat() {
     var box = document.getElementById('chatbox');
