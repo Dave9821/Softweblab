@@ -285,7 +285,9 @@
   /* ========== HOME PAGE ========== */
   .hero {
     min-height: 100vh;
-    background: linear-gradient(160deg, #F4F8EE 0%, #D4E9B8 40%, #B8D4C8 100%);
+    background: 
+      linear-gradient(135deg, rgba(244,248,238,0.96) 0%, rgba(212,233,184,0.92) 40%, rgba(184,212,200,0.88) 100%),
+      url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
     display: flex;
     align-items: center;
     padding: 120px 5% 80px;
@@ -520,8 +522,15 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    padding-top: 0 !important;
   }
 
+  .service-card-img {
+    transition: transform 0.4s ease;
+  }
+  .service-card:hover .service-card-img {
+    transform: scale(1.04);
+  }
   .service-card::before {
     content: '';
     position: absolute;
@@ -571,7 +580,9 @@
 
   /* Why Choose Us */
   .why-section {
-    background: linear-gradient(135deg, var(--forest) 0%, #3D6B20 100%);
+    background: 
+      linear-gradient(135deg, rgba(29,53,10,0.93) 0%, rgba(45,80,22,0.90) 100%),
+      url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
     padding: 90px 5%;
     position: relative;
     overflow: hidden;
@@ -774,7 +785,9 @@
   }
 
   .process-section {
-    background: var(--forest);
+    background:
+      linear-gradient(135deg, rgba(26,40,16,0.94) 0%, rgba(45,80,22,0.91) 100%),
+      url('https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
     padding: 80px 5%;
   }
 
@@ -1588,31 +1601,37 @@
     </div>
     <div class="services-grid">
       <div class="service-card" data-page="services">
+        <div class="service-card-img" style="background:url('https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80&auto=format&fit=crop') center/cover;height:150px;border-radius:12px;margin:-32px -32px 20px -32px;"></div>
         <div class="service-icon">🌐</div>
         <h3>Web Development</h3>
         <p>Stunning, fast, and conversion-optimized websites built with the latest technologies — from landing pages to enterprise platforms.</p>
       </div>
       <div class="service-card" data-page="services">
+        <div class="service-card-img" style="background:url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80&auto=format&fit=crop') center/cover;height:150px;border-radius:12px;margin:-32px -32px 20px -32px;"></div>
         <div class="service-icon">📱</div>
         <h3>App Development</h3>
         <p>Native and cross-platform mobile applications that deliver seamless user experiences across iOS and Android devices.</p>
       </div>
       <div class="service-card" data-page="services">
+        <div class="service-card-img" style="background:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop') center/cover;height:150px;border-radius:12px;margin:-32px -32px 20px -32px;"></div>
         <div class="service-icon">📣</div>
         <h3>Digital Marketing</h3>
         <p>Data-driven campaigns across SEO, Google Ads, content marketing, and email to drive real, measurable business growth.</p>
       </div>
       <div class="service-card" data-page="services">
+        <div class="service-card-img" style="background:url('https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop') center/cover;height:150px;border-radius:12px;margin:-32px -32px 20px -32px;"></div>
         <div class="service-icon">💬</div>
         <h3>Social Media Marketing</h3>
         <p>Strategic social presence management across LinkedIn, Instagram, Facebook & X — building communities and driving engagement.</p>
       </div>
       <div class="service-card" data-page="services">
+        <div class="service-card-img" style="background:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80&auto=format&fit=crop') center/cover;height:150px;border-radius:12px;margin:-32px -32px 20px -32px;"></div>
         <div class="service-icon">🖥️</div>
         <h3>IT Managed Services</h3>
         <p>Proactive infrastructure management, cloud solutions, and cybersecurity to keep your business running at full capacity.</p>
       </div>
       <div class="service-card" data-page="services">
+        <div class="service-card-img" style="background:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format&fit=crop') center/cover;height:150px;border-radius:12px;margin:-32px -32px 20px -32px;"></div>
         <div class="service-icon">🔧</div>
         <h3>IT Support for SMBs</h3>
         <p>Dedicated helpdesk and on-site IT support tailored for small and medium businesses — responsive, reliable, affordable.</p>
@@ -1707,7 +1726,7 @@
     </div>
   </section>
 
-  <div class="cta-banner">
+  <div class="cta-banner" style="background: linear-gradient(135deg, rgba(123,174,92,0.95), rgba(107,163,190,0.95)), url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80&auto=format&fit=crop') center/cover no-repeat;">
     <h2>Ready to Transform Your Business?</h2>
     <p>Let's build something extraordinary together. Get your free consultation today.</p>
     <a class="btn-primary" data-page="contact" style="cursor:pointer;">Start Your Journey →</a>
@@ -1803,7 +1822,7 @@
 <!-- ===== ABOUT US PAGE ===== -->
 <div id="page-about" class="page" role="main">
 
-  <section class="about-hero">
+  <section class="about-hero" style="background: linear-gradient(160deg, rgba(232,245,216,0.97) 0%, rgba(197,219,168,0.94) 60%, rgba(184,212,200,0.92) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;">
     <div class="about-intro">
       <div>
         <span class="section-label">About SoftWebLab</span>
