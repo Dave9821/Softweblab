@@ -492,3 +492,18 @@ p{margin:0}
   .form-row{grid-template-columns:1fr;gap:0}
   .form-card{padding:26px 20px 28px}
 }
+
+/* Append to the END of softweblab.css — overrides the earlier .brand-mark rule.
+
+   Why: softweblab-logo.svg is a 320x80 lockup containing the icon, the
+   wordmark AND the tagline "IT SERVICES & DIGITAL SOLUTIONS". At 34px tall
+   the tagline renders about 4px high and reads as a grey smudge.
+   Raising it to 44px makes the tagline legible and gives the nav more presence. */
+
+.nav-in{height:82px}
+.brand-mark{height:44px;width:auto}
+
+@media(max-width:680px){
+  .nav-in{height:66px}
+  .brand-mark{height:34px}
+}
