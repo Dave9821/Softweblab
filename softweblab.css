@@ -471,6 +471,12 @@ p{margin:0}
 .field input:focus,.field select:focus,.field textarea:focus{
   border-color:var(--moss);background:#fff;outline:none}
 .field-req{color:var(--grow)}
+.form-status{display:none;margin-top:16px;padding:13px 16px;border-radius:3px;
+             font-size:14.5px;line-height:1.5}
+.form-status.is-ok{display:block;background:rgba(74,122,41,.09);
+                   border:1px solid var(--moss-2);color:var(--moss)}
+.form-status.is-err{display:block;background:rgba(214,46,117,.07);
+                    border:1px solid var(--grow);color:var(--grow)}
 .form-note{font-family:var(--mono);font-size:11px;color:var(--ink-40);
            margin-top:14px;letter-spacing:.03em}
 
