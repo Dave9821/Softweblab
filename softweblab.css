@@ -227,20 +227,6 @@ p{margin:0}
 .stat p{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;
         color:rgba(233,237,229,.55);margin-top:12px}
 
-/* ============ TESTIMONIALS ============ */
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.quote{background:var(--card);border:1px solid var(--rule);border-radius:3px;padding:28px 24px;
-       display:flex;flex-direction:column;gap:18px;transition:.35s var(--ease)}
-.quote:hover{border-color:var(--haze);transform:translateY(-3px)}
-.quote-mark{font-family:var(--display);font-size:44px;line-height:.5;color:var(--grow);opacity:.5}
-.quote p{font-size:15.5px;line-height:1.62;color:var(--ink)}
-.quote-by{margin-top:auto;padding-top:16px;border-top:1px solid var(--rule);
-          display:flex;align-items:center;gap:12px}
-.avatar{width:34px;height:34px;border-radius:50%;background:var(--moss);color:#fff;flex:none;
-        display:grid;place-items:center;font-family:var(--mono);font-size:12px}
-.quote-by b{font-size:14.5px;font-weight:600;display:block}
-.quote-by span{font-family:var(--mono);font-size:11px;color:var(--ink-40)}
-
 /* ============ FAQ ============ */
 .faq{max-width:820px}
 .faq details{border-bottom:1px solid var(--rule)}
@@ -282,7 +268,7 @@ p{margin:0}
   .spec-feature{grid-column:span 2}
   .ai-grid{grid-template-columns:1fr;gap:38px}
   .ai-sticky{position:static}
-  .work-grid,.quotes{grid-template-columns:1fr 1fr}
+  .work-grid{grid-template-columns:1fr 1fr}
   .proc{grid-template-columns:repeat(3,1fr)}
   .proc-step:nth-child(3n){border-right:none}
   .foot-grid{grid-template-columns:1fr 1fr}
@@ -292,7 +278,7 @@ p{margin:0}
   .wrap{padding-inline:20px}
   .nav-links,.nav .btn{display:none}
   .nav-toggle{display:block}
-  .spec-grid,.work-grid,.quotes{grid-template-columns:1fr}
+  .spec-grid,.work-grid{grid-template-columns:1fr}
   .spec-feature{grid-column:span 1}
   .proc{grid-template-columns:1fr 1fr}
   .proc-step:nth-child(3n){border-right:1px solid var(--rule)}
@@ -430,22 +416,6 @@ p{margin:0}
           stroke-linecap:round;stroke-linejoin:round}
 .perk:hover svg{stroke:var(--grow)}
 
-/* --- careers: job list --- */
-.jobs{border-top:1px solid var(--rule)}
-.job{display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;
-     padding:26px 6px;border-bottom:1px solid var(--rule);position:relative;
-     transition:.35s var(--ease)}
-.job::before{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;
-             background:var(--grow);transition:width .5s var(--ease)}
-.job:hover{padding-left:16px;background:var(--paper-2)}
-.job:hover::before{width:100%}
-.job h4{font-size:20px;margin-bottom:10px;letter-spacing:-.018em}
-.job-meta{display:flex;flex-wrap:wrap;gap:18px;font-family:var(--mono);font-size:11px;
-          letter-spacing:.05em;color:var(--ink-40)}
-.job-dept{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-          color:var(--grow);border:1px solid var(--grow);border-radius:99px;
-          padding:3px 10px;display:inline-block;margin-bottom:12px}
-
 /* --- contact --- */
 .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
 .info-item{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:20px 0;
@@ -488,7 +458,6 @@ p{margin:0}
 @media(max-width:680px){
   .pair{grid-template-columns:1fr}
   .team,.perks{grid-template-columns:1fr}
-  .job{grid-template-columns:1fr;gap:16px;align-items:start}
   .form-row{grid-template-columns:1fr;gap:0}
   .form-card{padding:26px 20px 28px}
 }
