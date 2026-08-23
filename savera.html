@@ -3,8 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAVERA — Skin, hair &amp; body care made with Indian botanicals</title>
-<meta name="description" content="Cold-pressed Ayurvedic botanicals, clinically tested, made in small batches in Mumbai. Free shipping over Rs 799.">
+<title>Savera — a skincare concept by SoftWebLab</title>
+<meta name="description" content="A concept storefront for a fictional botanical skincare brand, built by SoftWebLab to demonstrate D2C beauty design.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Savera — a skincare concept by SoftWebLab">
+<meta property="og:description" content="A concept storefront for a fictional botanical skincare brand, built by SoftWebLab to demonstrate D2C beauty design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
@@ -35,6 +39,11 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03);
   transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
 .ph--hoverzoom:hover img{transform:scale(1.05)}
+
+/* concept disclosure strip */
+.concept-note{background:var(--forest);color:var(--chalk);padding:9px var(--pad);position:relative;z-index:61;
+  font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;line-height:1.7;text-align:center}
+.concept-note a{text-decoration:underline;text-underline-offset:3px}
 
 /* ticker */
 .ticker{background:var(--ink);color:var(--chalk);overflow:hidden;padding:9px 0;position:relative;z-index:60}
@@ -346,9 +355,11 @@ footer{padding:clamp(52px,6vw,80px) var(--pad) 110px}
   </clipPath>
 </defs></svg>
 
+<div class="concept-note">Concept site — a fictional brand, built by <a href="https://www.softweblab.net">SoftWebLab</a> to demonstrate D2C beauty design. Nothing here is for sale.</div>
+
 <div class="ticker"><div class="ticker__track">
-<span>Free shipping over ₹799</span><span>Dermatologist tested</span><span>Cold-pressed in Mumbai</span><span>Cruelty free · PETA certified</span><span>Refill pouches on every size</span>
-<span>Free shipping over ₹799</span><span>Dermatologist tested</span><span>Cold-pressed in Mumbai</span><span>Cruelty free · PETA certified</span><span>Refill pouches on every size</span>
+<span>Free shipping over ₹799</span><span>Small-batch formulas</span><span>Cold-pressed in Mumbai</span><span>Refillable packaging</span><span>15-day returns</span>
+<span>Free shipping over ₹799</span><span>Small-batch formulas</span><span>Cold-pressed in Mumbai</span><span>Refillable packaging</span><span>15-day returns</span>
 </div></div>
 
 <nav class="nav" id="nav">
@@ -377,9 +388,9 @@ footer{padding:clamp(52px,6vw,80px) var(--pad) 110px}
 
 <header class="hero">
   <div class="hero__copy">
-    <div class="eyebrow label">Ayurvedic botanicals, tested like medicine</div>
+    <div class="eyebrow label">Ayurvedic botanicals, small-batch formulas</div>
     <h1>Old rituals,<br><span class="it">modern</span> mornings.</h1>
-    <p class="lede">Cold-pressed oils and clinically tested actives, blended in batches of 400 bottles. Nothing in the formula you can't pronounce — and nothing on the label you can't verify.</p>
+    <p class="lede">Cold-pressed oils and botanical actives, blended in batches of 400 bottles. Nothing in the formula you can't pronounce.</p>
     <div class="hero__cta">
       <a href="#shop" class="btn btn--solid">Shop bestsellers</a>
       <a href="#ritual" class="btn btn--ghost">Build your ritual</a>
@@ -399,8 +410,8 @@ footer{padding:clamp(52px,6vw,80px) var(--pad) 110px}
 
 <div class="proof">
   <div><strong>48 hrs</strong><p>From harvest to cold press, so actives stay live.</p></div>
-  <div><strong>1,200 patch tests</strong><p>Every formula, on Indian skin tones, before launch.</p></div>
-  <div><strong>Batch no. on cap</strong><p>Type it on our site to read the full lab report.</p></div>
+  <div><strong>Batch of 400</strong><p>Every formula blended in small runs, not tanks.</p></div>
+  <div><strong>Batch no. on cap</strong><p>Traceable back to the harvest it came from.</p></div>
   <div><strong>Refill, don't rebuy</strong><p>Pouches use 74% less plastic than a new bottle.</p></div>
 </div>
 
@@ -461,10 +472,10 @@ footer{padding:clamp(52px,6vw,80px) var(--pad) 110px}
     <div class="rv">
       <blockquote>The first oil that didn't make me look <span class="it">wet</span> by noon.</blockquote>
       <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
-      <cite>Aditi R. · verified buyer · Bengaluru</cite>
+      <cite>Aditi R. · Bengaluru</cite>
       <div class="stats">
-        <div><strong>89%</strong><span>saw less dullness in 4 weeks</span></div>
-        <div><strong>94%</strong><span>said it didn't feel greasy</span></div>
+        <div><strong>26</strong><span>products across skin, hair and body</span></div>
+        <div><strong>400</strong><span>bottles per batch</span></div>
         <div><strong>5,200+</strong><span>reviews across products</span></div>
       </div>
     </div>
@@ -479,7 +490,7 @@ footer{padding:clamp(52px,6vw,80px) var(--pad) 110px}
 
 <section id="faq" style="padding-top:0">
   <div class="head rv"><h2>Before you order</h2></div>
-  <div class="faq rv"><details open><summary>Will the Glow Oil break me out?</summary><p>It is non-comedogenic and tested on oily and acne-prone skin, but any new oil deserves a two-day patch test behind the ear. If you use a prescription retinoid, apply the oil on alternate nights to start.</p></details><details><summary>How do refills work?</summary><p>Order a pouch instead of a bottle from any product page. Rinse and air-dry your glass bottle, then decant. Pouches cost about 30% less and use 74% less plastic.</p></details><details><summary>Where do you ship, and how fast?</summary><p>All India. Metros get it in 2–3 working days, the rest in 4–6. Orders above ₹799 ship free, and cash on delivery is available on every pin code we serve.</p></details><details><summary>Can I read the lab report for my batch?</summary><p>Yes. Every cap is stamped with a batch number — enter it on the Lab reports page to open the heavy-metal, microbial and actives assay for that exact batch.</p></details></div>
+  <div class="faq rv"><details open><summary>Will the Glow Oil break me out?</summary><p>It is formulated as a light, non-greasy oil, but any new oil deserves a two-day test on a small patch of skin behind the ear. If you use a prescription retinoid, apply on alternate nights to start.</p></details><details><summary>How do refills work?</summary><p>Order a pouch instead of a bottle from any product page. Rinse and air-dry your glass bottle, then decant. Pouches cost about 30% less and use 74% less plastic.</p></details><details><summary>Where do you ship, and how fast?</summary><p>All India. Metros get it in 2–3 working days, the rest in 4–6. Orders above ₹799 ship free, and cash on delivery is available on every pin code we serve.</p></details><details><summary>How should I store it?</summary><p>Away from direct sun, cap closed. Cold-pressed oils keep best somewhere cool and dark, and the glass bottle is there to help.</p></details></div>
 </section>
 
 <section class="news">
@@ -502,17 +513,17 @@ footer{padding:clamp(52px,6vw,80px) var(--pad) 110px}
     <div class="foot__brand">
       <span class="wordmark">SAVERA</span>
       <p>Skin, hair and body care made with Indian botanicals. Cold-pressed and bottled in Mumbai.</p>
-      <address>Savera Botanicals Pvt. Ltd.<br>Unit 4, Kanakia Wall Street, Andheri East, Mumbai 400093<br>care@savera.in · +91 22 4000 1234</address>
+      <address>Savera<br>Mumbai, India<br>care@savera.in</address>
     </div>
     <div class="foot"><h4>Shop</h4><ul><li><a href="#cats">Face</a></li><li><a href="#cats">Hair</a></li><li><a href="#cats">Body</a></li><li><a href="#shop">Refills</a></li><li><a href="#shop">Gift sets</a></li></ul></div>
-    <div class="foot"><h4>Know us</h4><ul><li><a href="#formula">Ingredients</a></li><li><a href="#">Lab reports</a></li><li><a href="#">Our farmers</a></li><li><a href="#">Journal</a></li></ul></div>
+    <div class="foot"><h4>Know us</h4><ul><li><a href="#formula">Ingredients</a></li><li><a href="#">Sourcing</a></li><li><a href="#">Our farmers</a></li><li><a href="#">Journal</a></li></ul></div>
     <div class="foot"><h4>Help</h4><ul><li><a href="#">Track order</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Returns in 15 days</a></li><li><a href="#">WhatsApp us</a></li></ul></div>
   </div>
   <div class="paybar">
     <span>UPI</span><span>Cash on delivery</span><span>Visa</span><span>Mastercard</span><span>RuPay</span><span>Net banking</span><span>Secure checkout</span>
   </div>
   <div class="foot__bar">
-    <span>© 2026 Savera Botanicals Pvt. Ltd. · GSTIN 27AABCS1429R1ZP · CIN U24246MH2019PTC331884</span>
+    <span>© 2026 Savera · Concept project · SoftWebLab Technologies</span>
     <span class="socials"><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">Privacy</a><a href="#">Terms</a></span>
   </div>
 </footer>
