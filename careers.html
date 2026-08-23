@@ -32,7 +32,7 @@
 <meta name="ICBM" content="41.8827, -87.6233">
 <meta name="theme-color" content="#2D5016">
 
-<link rel="icon" href="softweblab-logo.svg">
+<link rel="icon" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -41,7 +41,17 @@
 <body>
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="index.html"><img class="brand-mark" src="softweblab-logo.svg" alt="SoftWebLab"></a>
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 54 V22"/><path d="M32 39 L16 26"/><path d="M32 31 L48 17"/>
+        </g>
+        <circle cx="16" cy="26" r="4.6" fill="currentColor"/>
+        <circle cx="32" cy="54" r="4.6" fill="currentColor"/>
+        <circle cx="48" cy="17" r="4.8" fill="#D62E75"/>
+      </svg>
+      <span>SoftWebLab</span>
+    </a>
     <nav class="nav-links">
       <a href="services.html">Services</a>
       <a href="index.html#ai">AI</a>
@@ -140,7 +150,17 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <img class="foot-logo" src="softweblab-logo-white.svg" alt="SoftWebLab">
+        <div class="foot-brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 54 V22"/><path d="M32 39 L16 26"/><path d="M32 31 L48 17"/>
+            </g>
+            <circle cx="16" cy="26" r="4.6" fill="currentColor"/>
+            <circle cx="32" cy="54" r="4.6" fill="currentColor"/>
+            <circle cx="48" cy="17" r="4.8" fill="#D62E75"/>
+          </svg>
+          <span>SoftWebLab</span>
+        </div>
         <p style="margin-top:14px">AI, web, mobile and managed IT for small and mid-sized
           businesses. Growing companies through thoughtful technology since 2018.</p>
       </div>
@@ -158,10 +178,12 @@
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li></ul></div>
       <div><h5>Contact</h5><ul>
-        <li><a href="mailto:hello@softweblab.net">hello@softweblab.net</a></li>
+        <li><a href="mailto:info@softweblab.net">info@softweblab.net</a></li>
         <li><a href="tel:+13124523784">+1 312 452 3784</a></li>
-        <li>302 West Lane, Chicago, IL</li>
-        <li>Mon&ndash;Sat, 9 AM &ndash; 7 PM CST</li></ul></div>
+        <li class="foot-office"><b>US office</b>302 West Lane, Chicago, IL</li>
+        <li class="foot-office"><b>Development office</b>A-44A, Sector 16,<br>Noida 201301, India</li>
+        <li class="foot-office"><b>Hours</b>Mon–Sat, 9 AM – 7 PM CST</li>
+      </ul></div>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 SoftWebLab Technologies</span>

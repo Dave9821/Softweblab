@@ -32,7 +32,7 @@
 <meta name="ICBM" content="41.8827, -87.6233">
 <meta name="theme-color" content="#2D5016">
 
-<link rel="icon" href="softweblab-logo.svg">
+<link rel="icon" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -41,7 +41,17 @@
 <body>
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="index.html"><img class="brand-mark" src="softweblab-logo.svg" alt="SoftWebLab"></a>
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 54 V22"/><path d="M32 39 L16 26"/><path d="M32 31 L48 17"/>
+        </g>
+        <circle cx="16" cy="26" r="4.6" fill="currentColor"/>
+        <circle cx="32" cy="54" r="4.6" fill="currentColor"/>
+        <circle cx="48" cy="17" r="4.8" fill="#D62E75"/>
+      </svg>
+      <span>SoftWebLab</span>
+    </a>
     <nav class="nav-links">
       <a href="services.html">Services</a>
       <a href="index.html#ai">AI</a>
@@ -79,20 +89,35 @@
         <h2 style="font-size:clamp(26px,3vw,36px)">Direct lines</h2>
       </div>
       <div class="info-item rv">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s7-4.5 7-10a7 7 0 1 0-14 0c0 5.5 7 10 7 10Z" transform="translate(0,-4)"/><circle cx="10" cy="4" r="2.5"/></svg>
-        <div><h5>Our office</h5><p>302 West Lane, Chicago, IL</p></div>
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <rect x="2" y="4" width="16" height="12" rx="2"/><path d="m2 6 8 5 8-5"/>
+        </svg>
+        <div><h5>Email</h5><p><a href="mailto:info@softweblab.net">info@softweblab.net</a></p></div>
       </div>
       <div class="info-item rv">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L13 13l5 2v4a1 1 0 0 1-1 1A15 15 0 0 1 2 5a1 1 0 0 1 1-1Z"/></svg>
-        <div><h5>Phone</h5><p><a href="tel:+13124523784">+1 312 452 3784<br><span style="font-family:var(--mono);font-size:11px;color:var(--ink-40)">MON&ndash;SAT, 9 AM &ndash; 7 PM CST</span></a></p></div>
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M3 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L13 13l5 2v4a1 1 0 0 1-1 1A15 15 0 0 1 2 5a1 1 0 0 1 1-1Z"/>
+        </svg>
+        <div><h5>Phone</h5><p><a href="tel:+13124523784">+1 312 452 3784</a></p></div>
       </div>
       <div class="info-item rv">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="m2 6 8 5 8-5"/></svg>
-        <div><h5>Email</h5><p><a href="mailto:hello@softweblab.net">hello@softweblab.net</a></p></div>
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M10 18s7-4.5 7-10a7 7 0 1 0-14 0c0 5.5 7 10 7 10Z" transform="translate(0,-4)"/>
+          <circle cx="10" cy="4" r="2.5"/>
+        </svg>
+        <div><h5>Offices</h5>
+          <div class="office-split">
+            <div><b>United States</b><p>302 West Lane,<br>Chicago, IL</p></div>
+            <div><b>Development office</b><p>A-44A, Sector 16,<br>Noida 201301, India</p></div>
+          </div>
+        </div>
       </div>
       <div class="info-item rv">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 5v5l3 2"/></svg>
-        <div><h5>Business hours</h5><p>Monday &ndash; Saturday: 9:00 AM &ndash; 7:00 PM<br>Sunday: emergency support only</p></div>
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="8"/><path d="M10 5v5l3 2"/>
+        </svg>
+        <div><h5>Business hours</h5>
+          <p>Monday &ndash; Saturday: 9:00 AM &ndash; 7:00 PM CST<br>Sunday: emergency support only</p></div>
       </div>
     </div>
 
@@ -138,7 +163,17 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <img class="foot-logo" src="softweblab-logo-white.svg" alt="SoftWebLab">
+        <div class="foot-brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 54 V22"/><path d="M32 39 L16 26"/><path d="M32 31 L48 17"/>
+            </g>
+            <circle cx="16" cy="26" r="4.6" fill="currentColor"/>
+            <circle cx="32" cy="54" r="4.6" fill="currentColor"/>
+            <circle cx="48" cy="17" r="4.8" fill="#D62E75"/>
+          </svg>
+          <span>SoftWebLab</span>
+        </div>
         <p style="margin-top:14px">AI, web, mobile and managed IT for small and mid-sized
           businesses. Growing companies through thoughtful technology since 2018.</p>
       </div>
@@ -156,10 +191,12 @@
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact</a></li></ul></div>
       <div><h5>Contact</h5><ul>
-        <li><a href="mailto:hello@softweblab.net">hello@softweblab.net</a></li>
+        <li><a href="mailto:info@softweblab.net">info@softweblab.net</a></li>
         <li><a href="tel:+13124523784">+1 312 452 3784</a></li>
-        <li>302 West Lane, Chicago, IL</li>
-        <li>Mon&ndash;Sat, 9 AM &ndash; 7 PM CST</li></ul></div>
+        <li class="foot-office"><b>US office</b>302 West Lane, Chicago, IL</li>
+        <li class="foot-office"><b>Development office</b>A-44A, Sector 16,<br>Noida 201301, India</li>
+        <li class="foot-office"><b>Hours</b>Mon–Sat, 9 AM – 7 PM CST</li>
+      </ul></div>
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 SoftWebLab Technologies</span>
@@ -209,10 +246,10 @@ pnl.addEventListener('click', function(e){
         show('ok', "Message sent. We'll reply to your email within 4 business hours.");
         form.reset();
       } else {
-        show('err', 'Something went wrong. Please email hello@softweblab.net or call +1 312 452 3784.');
+        show('err', 'Something went wrong. Please email info@softweblab.net or call +1 312 452 3784.');
       }
     }).catch(function(){
-      show('err', 'Network error. Please email hello@softweblab.net or call +1 312 452 3784.');
+      show('err', 'Network error. Please email info@softweblab.net or call +1 312 452 3784.');
     }).then(function(){
       if (btn) { btn.innerHTML = btnLabel; btn.disabled = false; }
     });

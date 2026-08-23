@@ -462,17 +462,44 @@ p{margin:0}
   .form-card{padding:26px 20px 28px}
 }
 
-/* Append to the END of softweblab.css — overrides the earlier .brand-mark rule.
+/* Append to the END of softweblab.css.
+   Replaces the broken lockup with the new mark + live-text wordmark,
+   and styles the two-office contact blocks. */
 
-   Why: softweblab-logo.svg is a 320x80 lockup containing the icon, the
-   wordmark AND the tagline "IT SERVICES & DIGITAL SOLUTIONS". At 34px tall
-   the tagline renders about 4px high and reads as a grey smudge.
-   Raising it to 44px makes the tagline legible and gives the nav more presence. */
+/* --- brand --- */
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);
+       font-weight:700;font-size:21px;letter-spacing:-.035em;
+       color:var(--moss);margin-right:auto;line-height:1}
+.brand span{color:var(--ink)}
+.brand-mark{width:32px;height:32px;flex:none}
+.nav-in{height:74px}
 
-.nav-in{height:82px}
-.brand-mark{height:44px;width:auto}
+.foot-brand{display:flex;align-items:center;gap:10px;font-family:var(--display);
+            font-weight:700;font-size:23px;letter-spacing:-.035em;
+            color:var(--paper);margin-bottom:14px;line-height:1}
+.foot-brand .brand-mark{width:34px;height:34px}
+.foot-logo{display:none}
+
+/* --- two-office footer + contact --- */
+.foot-office{display:block;margin-top:12px;line-height:1.5}
+.foot-office b{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+               text-transform:uppercase;color:var(--grow);font-weight:400;margin-bottom:3px}
+
+.office-split{display:grid;gap:14px}
+.office-split > div > b{display:block;font-family:var(--mono);font-size:9.5px;
+                        letter-spacing:.14em;text-transform:uppercase;color:var(--grow);
+                        font-weight:400;margin-bottom:4px}
 
 @media(max-width:680px){
-  .nav-in{height:66px}
-  .brand-mark{height:34px}
+  .nav-in{height:64px}
+  .brand{font-size:19px}
+  .brand-mark{width:28px;height:28px}
 }
+
+/* --- hero spacing fix ---
+   The diagram rendered 507x662 while the text column was 500 tall, so
+   align-items:center pushed the text down ~81px on top of 90px of padding
+   — a 185px gap under the header. Capping the diagram width evens the two
+   columns out and the offset disappears. Measured result: 185px -> 68px. */
+.hero{padding-top:clamp(30px,3.4vw,52px)}
+.diagram{width:100%;max-width:400px;height:auto;display:block;margin-inline:auto}
