@@ -770,3 +770,74 @@ p{margin:0}
   .swl-ag * { transition: none !important; }
 }
 
+
+/* ---------- diagram reveal sequence ----------
+   Only the boundary diagram animates. The finished diagram is the
+   default state; .ag-armed (added by JS on services.html) hides the
+   parts and .ag-running plays them, so no-JS and reduced-motion
+   visitors get the finished diagram. */
+/* Armed only once JS confirms it can run the sequence.
+   Without this class the diagram renders finished. */
+.swl-ag__figure.ag-armed .ag-p { opacity: 0; }
+
+.swl-ag__figure.ag-armed .ag-d {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.swl-ag__figure.ag-running .ag-p {
+  animation: ag-appear 420ms ease-out forwards;
+}
+
+.swl-ag__figure.ag-running .ag-d {
+  animation: ag-draw 340ms ease-in-out forwards;
+}
+
+@keyframes ag-appear {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes ag-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* transform on SVG children needs a sane origin */
+.swl-ag__figure .ag-p { transform-box: fill-box; transform-origin: center; }
+
+/* ---- the sequence ---- */
+.swl-ag__figure.ag-running .ag-p--boundary { animation-delay:    0ms; }
+
+.swl-ag__figure.ag-running .ag-p--src1     { animation-delay:  220ms; }
+.swl-ag__figure.ag-running .ag-p--src2     { animation-delay:  300ms; }
+.swl-ag__figure.ag-running .ag-p--src3     { animation-delay:  380ms; }
+
+.swl-ag__figure.ag-running .ag-d--feed1    { animation-delay:  520ms; }
+.swl-ag__figure.ag-running .ag-d--feed2    { animation-delay:  560ms; }
+.swl-ag__figure.ag-running .ag-d--feed3    { animation-delay:  600ms; }
+
+.swl-ag__figure.ag-running .ag-p--agent    { animation-delay:  820ms; }
+
+.swl-ag__figure.ag-running .ag-d--out      { animation-delay: 1060ms; }
+.swl-ag__figure.ag-running .ag-p--cross    { animation-delay: 1300ms; }
+.swl-ag__figure.ag-running .ag-d--out2     { animation-delay: 1340ms; }
+.swl-ag__figure.ag-running .ag-p--outlabel { animation-delay: 1400ms; }
+.swl-ag__figure.ag-running .ag-p--model    { animation-delay: 1420ms; }
+
+.swl-ag__figure.ag-running .ag-d--approve  { animation-delay: 1180ms; }
+.swl-ag__figure.ag-running .ag-p--approval { animation-delay: 1400ms; }
+
+.swl-ag__figure.ag-running .ag-d--team     { animation-delay: 1620ms; }
+.swl-ag__figure.ag-running .ag-d--team2    { animation-delay: 1720ms; }
+.swl-ag__figure.ag-running .ag-p--teambox  { animation-delay: 1780ms; }
+
+/* The existing .swl-ag reduced-motion rule kills transitions.
+   This kills the sequence outright and shows the finished diagram. */
+@media (prefers-reduced-motion: reduce) {
+  .swl-ag__figure.ag-armed .ag-p,
+  .swl-ag__figure.ag-armed .ag-d {
+    opacity: 1;
+    stroke-dashoffset: 0;
+    animation: none !important;
+  }
+}

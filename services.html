@@ -159,57 +159,72 @@
         <g fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke">
 
           <!-- boundary -->
-          <rect x="18" y="46" width="574" height="356" rx="4"
-                stroke-dasharray="7 6" opacity="0.55"/>
-          <text x="34" y="34" font-size="15" font-weight="600" fill="currentColor" stroke="none">Your infrastructure</text>
+          <g class="ag-p ag-p--boundary">
+            <rect x="18" y="46" width="574" height="356" rx="4"
+                  stroke-dasharray="7 6" opacity="0.55"/>
+            <text x="34" y="34" font-size="15" font-weight="600" fill="currentColor" stroke="none">Your infrastructure</text>
+          </g>
 
           <!-- sources -->
-          <g opacity="0.75">
-            <rect x="52" y="98" width="132" height="46" rx="2"/>
-            <rect x="52" y="180" width="132" height="46" rx="2"/>
-            <rect x="52" y="262" width="132" height="46" rx="2"/>
+          <g class="ag-p ag-p--src1">
+            <rect x="52" y="98" width="132" height="46" rx="2" opacity="0.75"/>
+            <text x="70" y="126" font-size="14" fill="currentColor" stroke="none">Mailbox</text>
           </g>
-          <g fill="currentColor" stroke="none" font-size="14">
-            <text x="70" y="126">Mailbox</text>
-            <text x="70" y="208">Documents</text>
-            <text x="70" y="290">Records, database</text>
+          <g class="ag-p ag-p--src2">
+            <rect x="52" y="180" width="132" height="46" rx="2" opacity="0.75"/>
+            <text x="70" y="208" font-size="14" fill="currentColor" stroke="none">Documents</text>
+          </g>
+          <g class="ag-p ag-p--src3">
+            <rect x="52" y="262" width="132" height="46" rx="2" opacity="0.75"/>
+            <text x="70" y="290" font-size="14" fill="currentColor" stroke="none">Records, database</text>
           </g>
 
           <!-- source connectors -->
           <g opacity="0.5">
-            <path d="M184 121 H218 V196 H248"/>
-            <path d="M184 203 H248"/>
-            <path d="M184 285 H218 V210 H248"/>
+            <path class="ag-d ag-d--feed1" pathLength="1" d="M184 121 H218 V196 H248"/>
+            <path class="ag-d ag-d--feed2" pathLength="1" d="M184 203 H248"/>
+            <path class="ag-d ag-d--feed3" pathLength="1" d="M184 285 H218 V210 H248"/>
           </g>
 
           <!-- agent -->
-          <rect x="248" y="164" width="196" height="80" rx="3" stroke-width="2.25"/>
-          <text x="270" y="198" font-size="16" font-weight="600" fill="currentColor" stroke="none">Agent</text>
-          <text x="270" y="222" font-size="13" fill="currentColor" stroke="none" opacity="0.65">sandboxed, scoped</text>
+          <g class="ag-p ag-p--agent">
+            <rect x="248" y="164" width="196" height="80" rx="3" stroke-width="2.25"/>
+            <text x="270" y="198" font-size="16" font-weight="600" fill="currentColor" stroke="none">Agent</text>
+            <text x="270" y="222" font-size="13" fill="currentColor" stroke="none" opacity="0.65">sandboxed, scoped</text>
+          </g>
+
+          <!-- out to model provider -->
+          <path class="ag-d ag-d--out" pathLength="1" d="M444 190 H592" opacity="0.5"/>
+          <path class="ag-d ag-d--out2" pathLength="1" d="M592 190 H644" opacity="0.5"/>
+          <g class="ag-p ag-p--outlabel">
+            <text x="600" y="176" font-size="12" fill="currentColor" stroke="none" opacity="0.8">task text only</text>
+          </g>
+          <g class="ag-p ag-p--model">
+            <rect x="644" y="150" width="212" height="76" rx="3"/>
+            <text x="666" y="182" font-size="15" font-weight="600" fill="currentColor" stroke="none">Model provider</text>
+            <text x="666" y="205" font-size="13" fill="currentColor" stroke="none" opacity="0.65">your account, your key</text>
+          </g>
 
           <!-- approval -->
-          <path d="M346 244 V296" opacity="0.5"/>
-          <rect x="248" y="296" width="196" height="54" rx="2" opacity="0.75"/>
-          <text x="270" y="329" font-size="14" fill="currentColor" stroke="none">Your approval</text>
+          <path class="ag-d ag-d--approve" pathLength="1" d="M346 244 V296" opacity="0.5"/>
+          <g class="ag-p ag-p--approval">
+            <rect x="248" y="296" width="196" height="54" rx="2" opacity="0.75"/>
+            <text x="270" y="329" font-size="14" fill="currentColor" stroke="none">Your approval</text>
+          </g>
 
-          <!-- crossings -->
-          <path d="M444 190 H592" opacity="0.5"/>
-          <path d="M444 323 H520 V352 H592" opacity="0.5"/>
-          <circle cx="592" cy="190" r="4.5" fill="var(--ag-surface)"/>
-          <circle cx="592" cy="352" r="4.5" fill="var(--ag-surface)"/>
+          <!-- out to team -->
+          <path class="ag-d ag-d--team" pathLength="1" d="M444 323 H520 V352 H592" opacity="0.5"/>
+          <path class="ag-d ag-d--team2" pathLength="1" d="M592 352 H644" opacity="0.5"/>
+          <g class="ag-p ag-p--teambox">
+            <rect x="644" y="314" width="212" height="76" rx="3"/>
+            <text x="666" y="346" font-size="15" font-weight="600" fill="currentColor" stroke="none">Your team</text>
+            <text x="666" y="369" font-size="13" fill="currentColor" stroke="none" opacity="0.65">Slack, WhatsApp, email</text>
+          </g>
 
-          <!-- outside: model provider -->
-          <rect x="644" y="150" width="212" height="76" rx="3"/>
-          <text x="666" y="182" font-size="15" font-weight="600" fill="currentColor" stroke="none">Model provider</text>
-          <text x="666" y="205" font-size="13" fill="currentColor" stroke="none" opacity="0.65">your account, your key</text>
-          <path d="M592 190 H644" opacity="0.5"/>
-          <text x="600" y="176" font-size="12" fill="currentColor" stroke="none" opacity="0.8">task text only</text>
+          <!-- boundary crossings: drawn last so they punch through the connectors -->
+          <circle class="ag-p ag-p--cross" cx="592" cy="190" r="4.5" fill="var(--ag-surface)"/>
+          <circle class="ag-p ag-p--cross" cx="592" cy="352" r="4.5" fill="var(--ag-surface)"/>
 
-          <!-- outside: team -->
-          <rect x="644" y="314" width="212" height="76" rx="3"/>
-          <text x="666" y="346" font-size="15" font-weight="600" fill="currentColor" stroke="none">Your team</text>
-          <text x="666" y="369" font-size="13" fill="currentColor" stroke="none" opacity="0.65">Slack, WhatsApp, email</text>
-          <path d="M592 352 H644" opacity="0.5"/>
         </g>
       </svg>
       <figcaption class="swl-ag__caption">Source files never leave the boundary. What crosses it is the text of a single task, sent to a provider account you own and can audit line by line.</figcaption>
@@ -415,6 +430,28 @@ t.addEventListener('click', function(){
 pnl.addEventListener('click', function(e){
   if(e.target.tagName === 'A') pnl.classList.remove('open');
 });
+</script>
+<script>
+  (function () {
+    var figure = document.querySelector('#private-agents .swl-ag__figure');
+    if (!figure || !('IntersectionObserver' in window)) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        if (!figure.classList.contains('ag-armed')) {
+          figure.classList.add('ag-armed');
+          void figure.offsetWidth;   // flush the armed state before running
+        }
+        figure.classList.add('ag-running');
+        observer.disconnect();
+      });
+    }, { threshold: 0.35 });
+
+    observer.observe(figure);
+  })();
 </script>
 </body>
 </html>
