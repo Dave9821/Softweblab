@@ -137,6 +137,189 @@
   </div>
 </section>
 
+<section class="swl-ag" id="private-agents" aria-labelledby="private-agents-title">
+  <div class="wrap">
+
+    <div class="swl-ag__lead">
+      <div>
+        <h2 class="swl-ag__title" id="private-agents-title">Private AI agents, running on your own infrastructure</h2>
+        <p class="swl-ag__standfirst">Automation for the repetitive parts of your operations, deployed inside your perimeter rather than on a vendor's cloud.</p>
+      </div>
+      <div class="swl-ag__body">
+        <p>Most AI tools ask you to send your working files to someone else's servers. For a firm handling client matters, loan applications or signed contracts, that is often a difficult conversation with your own compliance team — and sometimes simply not an option.</p>
+        <p>We deploy autonomous agents on hardware you control, using a model provider account in your own name. Your documents stay where they already are. We hold no copy, and no third-party automation platform sits in the middle.</p>
+      </div>
+    </div>
+
+    <figure class="swl-ag__figure">
+      <svg viewBox="0 0 880 430" role="img" aria-labelledby="ag-diagram-title ag-diagram-desc">
+        <title id="ag-diagram-title">Where the agent sits</title>
+        <desc id="ag-diagram-desc">The agent, your email, documents and records all sit inside your own infrastructure. Only the task text crosses out to your model provider. Results reach your team on their usual channels, after human approval.</desc>
+
+        <g fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke">
+
+          <!-- boundary -->
+          <rect x="18" y="46" width="574" height="356" rx="4"
+                stroke-dasharray="7 6" opacity="0.55"/>
+          <text x="34" y="34" font-size="15" font-weight="600" fill="currentColor" stroke="none">Your infrastructure</text>
+
+          <!-- sources -->
+          <g opacity="0.75">
+            <rect x="52" y="98" width="132" height="46" rx="2"/>
+            <rect x="52" y="180" width="132" height="46" rx="2"/>
+            <rect x="52" y="262" width="132" height="46" rx="2"/>
+          </g>
+          <g fill="currentColor" stroke="none" font-size="14">
+            <text x="70" y="126">Mailbox</text>
+            <text x="70" y="208">Documents</text>
+            <text x="70" y="290">Records, database</text>
+          </g>
+
+          <!-- source connectors -->
+          <g opacity="0.5">
+            <path d="M184 121 H218 V196 H248"/>
+            <path d="M184 203 H248"/>
+            <path d="M184 285 H218 V210 H248"/>
+          </g>
+
+          <!-- agent -->
+          <rect x="248" y="164" width="196" height="80" rx="3" stroke-width="2.25"/>
+          <text x="270" y="198" font-size="16" font-weight="600" fill="currentColor" stroke="none">Agent</text>
+          <text x="270" y="222" font-size="13" fill="currentColor" stroke="none" opacity="0.65">sandboxed, scoped</text>
+
+          <!-- approval -->
+          <path d="M346 244 V296" opacity="0.5"/>
+          <rect x="248" y="296" width="196" height="54" rx="2" opacity="0.75"/>
+          <text x="270" y="329" font-size="14" fill="currentColor" stroke="none">Your approval</text>
+
+          <!-- crossings -->
+          <path d="M444 190 H592" opacity="0.5"/>
+          <path d="M444 323 H520 V352 H592" opacity="0.5"/>
+          <circle cx="592" cy="190" r="4.5" fill="var(--ag-surface)"/>
+          <circle cx="592" cy="352" r="4.5" fill="var(--ag-surface)"/>
+
+          <!-- outside: model provider -->
+          <rect x="644" y="150" width="212" height="76" rx="3"/>
+          <text x="666" y="182" font-size="15" font-weight="600" fill="currentColor" stroke="none">Model provider</text>
+          <text x="666" y="205" font-size="13" fill="currentColor" stroke="none" opacity="0.65">your account, your key</text>
+          <path d="M592 190 H644" opacity="0.5"/>
+          <text x="600" y="176" font-size="12" fill="currentColor" stroke="none" opacity="0.8">task text only</text>
+
+          <!-- outside: team -->
+          <rect x="644" y="314" width="212" height="76" rx="3"/>
+          <text x="666" y="346" font-size="15" font-weight="600" fill="currentColor" stroke="none">Your team</text>
+          <text x="666" y="369" font-size="13" fill="currentColor" stroke="none" opacity="0.65">Slack, WhatsApp, email</text>
+          <path d="M592 352 H644" opacity="0.5"/>
+        </g>
+      </svg>
+      <figcaption class="swl-ag__caption">Source files never leave the boundary. What crosses it is the text of a single task, sent to a provider account you own and can audit line by line.</figcaption>
+    </figure>
+
+    <div class="swl-ag__block">
+      <h3 class="swl-ag__h3">What we automate</h3>
+      <p>We do not sell an open-ended assistant. We pick two or three tasks that eat your team's week and automate exactly those, with the scope written down before we start.</p>
+
+      <div class="swl-ag__sectors">
+
+        <div class="swl-ag__sector">
+          <svg class="swl-ag__glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M9 4h14l8 8v24H9z"/>
+            <path d="M23 4v8h8"/>
+            <path d="M14 21h12M14 27h8"/>
+          </svg>
+          <h4>Legal practices</h4>
+          <p>Client intake triage, first-pass document summaries, and filing deadlines tracked against your matter list.</p>
+        </div>
+
+        <div class="swl-ag__sector">
+          <svg class="swl-ag__glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M20 4l13 5v11c0 8-5.5 13.5-13 16-7.5-2.5-13-8-13-16V9z"/>
+            <path d="M14 20l4.5 4.5L27 16"/>
+          </svg>
+          <h4>Lending and insurance</h4>
+          <p>Application pre-screening, document checklist verification, and follow-ups that go out on schedule instead of when someone remembers.</p>
+        </div>
+
+        <div class="swl-ag__sector">
+          <svg class="swl-ag__glyph" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M5 18L20 6l15 12"/>
+            <path d="M9 21v14h22V21"/>
+            <path d="M17 35v-9h6v9"/>
+          </svg>
+          <h4>Property firms</h4>
+          <p>Enquiry routing to the right agent, listing data kept current across portals, and viewing coordination.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="swl-ag__block">
+      <h3 class="swl-ag__h3">How we keep it contained</h3>
+      <p>An agent with the run of your systems is a liability, not an asset. We document what it will not do as carefully as what it will.</p>
+
+      <ul class="swl-ag__rails">
+        <li class="swl-ag__rail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8"/></svg>
+          <span><b>No write access to production data</b>Every deployment reads from your systems and writes only to its own workspace.</span>
+        </li>
+        <li class="swl-ag__rail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h9"/><path d="M13 8l4 4-4 4"/><rect x="17" y="4" width="3" height="16" rx="1"/></svg>
+          <span><b>Nothing leaves without a human</b>Outbound email and messages are drafted for review. A person presses send.</span>
+        </li>
+        <li class="swl-ag__rail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="12" r="2.5"/></svg>
+          <span><b>Isolated execution</b>The agent runs in a container with a defined list of systems it can reach, and nothing else.</span>
+        </li>
+        <li class="swl-ag__rail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 19V6"/><path d="M4 19h16"/><path d="M8 15l4-5 3 3 4-6"/><path d="M8 8h11" stroke-dasharray="3 3"/></svg>
+          <span><b>A hard ceiling on spend</b>Monthly model usage is capped at a figure you set. You see the running total, because the account is yours.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="swl-ag__block">
+      <h3 class="swl-ag__h3">What we run</h3>
+      <p>We build on established open source rather than a platform of our own, so you are never locked into us. If you part ways with SoftWebLab, the deployment keeps working and any competent engineer can pick it up.</p>
+
+      <div class="swl-ag__stack" data-stack>
+        <div class="swl-ag__tool">
+          <h4>Hermes Agent</h4>
+          <p>An open-source autonomous agent with persistent memory, sandboxed execution, and delivery to the messaging platforms your team already uses. We pin a fixed version per deployment and handle upgrades on a scheduled window rather than automatically.</p>
+          <span class="swl-ag__licence">MIT licensed</span>
+        </div>
+        <div class="swl-ag__tool">
+          <h4>n8n</h4>
+          <p>Visual workflow automation for the steps that should stay predictable, with connectors to mail, calendars and the systems you already run. The instance lives on your server, under your own credentials, and you can see every step it takes.</p>
+          <span class="swl-ag__licence">self-hosted, your instance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="swl-ag__block">
+      <h3 class="swl-ag__h3">How we work together</h3>
+
+      <div class="swl-ag__engage">
+        <div class="swl-ag__step">
+          <h4>Pilot</h4>
+          <em>Two weeks, fixed price</em>
+          <p>One workflow, chosen together, deployed and running on your infrastructure. Yours to keep whether or not you continue with us.</p>
+        </div>
+        <div class="swl-ag__step">
+          <h4>Managed</h4>
+          <em>Monthly</em>
+          <p>Further workflows, version upgrades on a fixed schedule, monitoring and support. You keep your own model provider account, so usage costs stay visible and directly yours.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="swl-ag__cta">
+      <p>Tell us which two hours of your week you would most like back.</p>
+      <a class="swl-ag__button" href="contact.html">Start a conversation</a>
+    </div>
+
+  </div>
+</section>
+
 <section class="sec" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv">
