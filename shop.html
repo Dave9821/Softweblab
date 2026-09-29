@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pay Online — SoftWebLab | Web Services Payment</title>
+<meta name="description" content="Pay SoftWebLab securely for web services with PayPal or card. Itemised receipt issued instantly.">
+<meta name="keywords" content="IT services Chicago, web development Chicago, app development, digital marketing Chicago, social media marketing, IT support small business, managed IT services, SEO services Chicago, SoftWebLab">
+<meta name="author" content="SoftWebLab Technologies">
+<meta name="robots" content="noindex, follow">
+<meta name="googlebot" content="noindex, follow">
+<link rel="canonical" href="https://www.softweblab.net/shop">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.softweblab.net/shop">
+<meta property="og:title" content="Pay Online — SoftWebLab">
+<meta property="og:description" content="Pay SoftWebLab securely for web services with PayPal or card. Itemised receipt issued instantly.">
+<meta property="og:image" content="https://www.softweblab.net/og-image.jpg">
+<meta property="og:site_name" content="SoftWebLab">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.softweblab.net/shop">
+<meta name="twitter:title" content="Pay Online — SoftWebLab">
+<meta name="twitter:description" content="Pay SoftWebLab securely for web services with PayPal or card. Itemised receipt issued instantly.">
+<meta name="twitter:image" content="https://www.softweblab.net/og-image.jpg">
+
+<meta name="geo.region" content="US-IL">
+<meta name="geo.placename" content="Chicago, Illinois">
+<meta name="geo.position" content="41.8827;-87.6233">
+<meta name="ICBM" content="41.8827, -87.6233">
+<meta name="theme-color" content="#2D5016">
+
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="softweblab.css">
+</head>
+<body>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 54 V22"/><path d="M32 39 L16 26"/><path d="M32 31 L48 17"/>
+        </g>
+        <circle cx="16" cy="26" r="4.6" fill="currentColor"/>
+        <circle cx="32" cy="54" r="4.6" fill="currentColor"/>
+        <circle cx="48" cy="17" r="4.8" fill="#D62E75"/>
+      </svg>
+      <span>SoftWebLab</span>
+    </a>
+    <nav class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="index.html#ai">AI</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn-primary" href="contact.html">Get a free quote</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-panel" id="navPanel">
+    <a href="services.html">Services</a><a href="index.html#ai">AI</a>
+    <a href="work.html">Work</a><a href="about.html">About</a>
+    <a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow fade-up" style="--rd:80ms">Pay online</div>
+    <h1>
+      <span class="rise"><span style="--rd:180ms">Pay for your</span></span>
+      <span class="rise"><span style="--rd:290ms"><em>web services</em></span></span>
+    </h1>
+    <p class="lede fade-up" style="--rd:500ms">Add the services we agreed on, enter the amount from your quote, and pay securely with PayPal or card. You get an itemised receipt the moment it clears.</p>
+  </div>
+</section>
+
+<section class="sec shop-sec">
+  <div class="wrap shop-grid">
+
+    <form class="form-card shop-form" id="shopForm" novalidate>
+      <div class="shop-step">
+        <span class="shop-num">01</span>
+        <h3>Your details</h3>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="cName">Full name <span class="field-req">*</span></label>
+          <input id="cName" name="name" type="text" required autocomplete="name"></div>
+        <div class="field"><label for="cEmail">Email <span class="field-req">*</span></label>
+          <input id="cEmail" name="email" type="email" required autocomplete="email"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="cCompany">Company</label>
+          <input id="cCompany" name="company" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="cPhone">Phone</label>
+          <input id="cPhone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="cCountry">Country</label>
+        <input id="cCountry" name="country" type="text" autocomplete="country-name"></div>
+
+      <div class="shop-step">
+        <span class="shop-num">02</span>
+        <h3>Services &amp; amounts</h3>
+        <div class="field shop-cur">
+          <label for="cCurrency" class="sr-only">Currency</label>
+          <select id="cCurrency" name="currency" aria-label="Currency">
+            <option value="USD">USD $</option>
+            <option value="EUR">EUR €</option>
+            <option value="GBP">GBP £</option>
+            <option value="CAD">CAD $</option>
+            <option value="AUD">AUD $</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="lines" class="lines"></div>
+      <button type="button" class="btn btn-ghost add-line" id="addLine">+ Add another service</button>
+
+      <div class="field" style="margin-top:22px"><label for="cNote">Quote / project reference</label>
+        <input id="cNote" name="note" type="text" maxlength="80" placeholder="e.g. Quote #1042, Phase 2 milestone"></div>
+
+      <p class="form-status" id="shopStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <aside class="itin" id="itin" aria-label="Payment summary">
+      <div class="itin-card">
+        <div class="itin-head">
+          <div>
+            <span class="itin-label">Itinerary</span>
+            <h3>Web services</h3>
+          </div>
+          <span class="itin-env" id="itinEnv" hidden>Sandbox</span>
+        </div>
+
+        <dl class="itin-bill">
+          <div><dt>Billed to</dt><dd id="sumName">&mdash;</dd></div>
+          <div><dt>Payee</dt><dd>SoftWebLab Technologies</dd></div>
+        </dl>
+
+        <ol class="itin-lines" id="sumLines"></ol>
+
+        <div class="itin-total">
+          <span>Total due</span>
+          <strong id="sumTotal">$0.00</strong>
+        </div>
+
+        <div id="payArea">
+          <p class="itin-hint" id="payHint">Fill in your name, email and at least one amount to unlock payment.</p>
+          <div id="paypalButtons" class="pp-buttons" aria-live="polite"></div>
+        </div>
+
+        <p class="itin-secure">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="1.5"/><path d="M7 9V6.5a3 3 0 0 1 6 0V9"/></svg>
+          Processed by PayPal. We never see your card details.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Receipt (shown after a successful capture) -->
+    <div class="receipt" id="receipt" hidden>
+      <div class="receipt-card">
+        <div class="receipt-top">
+          <span class="receipt-tick" aria-hidden="true">✓</span>
+          <div>
+            <span class="itin-label">Payment received</span>
+            <h2>Thank you, <span id="rName"></span></h2>
+          </div>
+        </div>
+        <dl class="receipt-meta">
+          <div><dt>Invoice</dt><dd id="rInvoice"></dd></div>
+          <div><dt>PayPal transaction</dt><dd id="rTxn"></dd></div>
+          <div><dt>Date</dt><dd id="rDate"></dd></div>
+          <div><dt>Status</dt><dd id="rStatus"></dd></div>
+        </dl>
+        <ol class="itin-lines" id="rLines"></ol>
+        <div class="itin-total"><span>Amount paid</span><strong id="rTotal"></strong></div>
+        <p class="receipt-note" id="rNote">A confirmation from PayPal is on its way to your email. Keep this invoice number for your records.</p>
+        <div class="receipt-actions">
+          <button class="btn btn-primary" type="button" onclick="window.print()">Print / save as PDF</button>
+          <a class="btn btn-ghost" href="index.html">Back to home</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M32 54 V22"/><path d="M32 39 L16 26"/><path d="M32 31 L48 17"/>
+            </g>
+            <circle cx="16" cy="26" r="4.6" fill="currentColor"/>
+            <circle cx="32" cy="54" r="4.6" fill="currentColor"/>
+            <circle cx="48" cy="17" r="4.8" fill="#D62E75"/>
+          </svg>
+          <span>SoftWebLab</span>
+        </div>
+        <p style="margin-top:14px">AI, web, mobile and managed IT for small and mid-sized
+          businesses. Growing companies through thoughtful technology since 2018.</p>
+      </div>
+      <div><h5>Services</h5><ul>
+        <li><a href="index.html#ai">AI &amp; automation</a></li>
+        <li><a href="services.html#private-agents">Private AI Agents</a></li>
+        <li><a href="services.html">Web development</a></li>
+        <li><a href="services.html">Mobile apps</a></li>
+        <li><a href="services.html">Digital marketing</a></li>
+        <li><a href="services.html">Managed IT</a></li>
+        <li><a href="services.html">IT support</a></li></ul></div>
+      <div><h5>Company</h5><ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="shop.html">Pay online</a></li></ul></div>
+      <div><h5>Contact</h5><ul>
+        <li><a href="mailto:info@softweblab.net">info@softweblab.net</a></li>
+        <li><a href="tel:+13124523784">+1 312 452 3784</a></li>
+        <li class="foot-office"><b>US office</b>302 West Lane, Chicago, IL</li>
+        <li class="foot-office"><b>Development office</b>A-44A, Sector 16,<br>Noida 201301, India</li>
+        <li class="foot-office"><b>Hours</b>Mon–Sat, 9 AM – 7 PM CST</li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 SoftWebLab Technologies</span>
+      <span>Privacy &middot; Terms &middot; Sitemap</span>
+    </div>
+  </div>
+</footer>
+<script>
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+var t = document.getElementById('navToggle'), pnl = document.getElementById('navPanel');
+t.addEventListener('click', function(){
+  var open = pnl.classList.toggle('open');
+  t.setAttribute('aria-expanded', open);
+});
+pnl.addEventListener('click', function(e){
+  if(e.target.tagName === 'A') pnl.classList.remove('open');
+});
+
+</script>
+<script>
+(function(){
+  var SERVICES = ['Web development','Website maintenance','Mobile app development','AI & automation',
+    'Private AI agents','Digital marketing','SEO','Social media marketing','IT managed services',
+    'IT support','Hosting & domain','Custom web service'];
+  var SYM = {USD:'$',EUR:'€',GBP:'£',CAD:'CA$',AUD:'A$'};
+  var FORMSPREE = 'https://formspree.io/f/xzdjderr';
+
+  var $ = function(id){ return document.getElementById(id); };
+  var form = $('shopForm'), linesEl = $('lines'), statusEl = $('shopStatus');
+  var curSel = $('cCurrency'), btnBox = $('paypalButtons'), hint = $('payHint');
+  var config = null, sdkCurrency = null, buttons = null;
+
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function fmt(n, cur){ cur = cur || curSel.value; return (SYM[cur]||'') + Number(n||0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function show(kind, text){ statusEl.textContent = text; statusEl.className = 'form-status is-' + kind; }
+  function clearStatus(){ statusEl.className = 'form-status'; statusEl.textContent = ''; }
+
+  /* ---------- service lines ---------- */
+  function addLine(pre){
+    pre = pre || {};
+    var el = document.createElement('div');
+    el.className = 'line';
+    var opts = SERVICES.map(function(s){ return '<option' + (s === pre.service ? ' selected' : '') + '>' + esc(s) + '</option>'; }).join('');
+    el.innerHTML =
+      '<span class="line-idx"></span>' +
+      '<button type="button" class="line-del" aria-label="Remove this service">Remove ×</button>' +
+      '<div class="line-grid">' +
+        '<div class="field"><label>Service</label><select class="l-service">' + opts + '</select></div>' +
+        '<div class="field line-amt"><label>Amount <span class="field-req">*</span></label>' +
+          '<span class="sym"></span><input class="l-amount" type="number" inputmode="decimal" min="1" step="0.01" placeholder="0.00" value="' + (pre.amount ? esc(pre.amount) : '') + '"></div>' +
+      '</div>' +
+      '<div class="field"><label>Description</label><input class="l-desc" type="text" maxlength="120" placeholder="e.g. 5-page business website, first milestone" value="' + (pre.desc ? esc(pre.desc) : '') + '"></div>';
+    el.querySelector('.line-del').addEventListener('click', function(){
+      if (linesEl.children.length > 1) { el.remove(); refresh(); }
+    });
+    linesEl.appendChild(el);
+    refresh();
+  }
+
+  function collect(){
+    var items = [].map.call(linesEl.querySelectorAll('.line'), function(l){
+      return {
+        service: l.querySelector('.l-service').value,
+        description: l.querySelector('.l-desc').value.trim(),
+        amount: Math.round(parseFloat(l.querySelector('.l-amount').value) * 100) / 100
+      };
+    });
+    return {
+      currency: curSel.value,
+      client: { name: $('cName').value.trim(), email: $('cEmail').value.trim(),
+                company: $('cCompany').value.trim(), phone: $('cPhone').value.trim(), country: $('cCountry').value.trim() },
+      items: items,
+      note: $('cNote').value.trim()
+    };
+  }
+
+  function problem(d){
+    if (!d.client.name) return 'Please enter your full name.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.client.email)) return 'Please enter a valid email.';
+    for (var i = 0; i < d.items.length; i++) {
+      if (!(d.items[i].amount >= 1)) return 'Enter an amount of at least 1.00 for service ' + (i + 1) + '.';
+    }
+    return '';
+  }
+
+  function renderLines(target, items, cur){
+    target.innerHTML = items.length ? items.map(function(it){
+      return '<li><div><b>Web service — ' + esc(it.service) + '</b>' + (it.description ? '<small>' + esc(it.description) + '</small>' : '') + '</div>' +
+             '<span class="amt">' + (it.amount >= 1 ? fmt(it.amount, cur) : '—') + '</span></li>';
+    }).join('') : '<li class="empty">No services added yet</li>';
+  }
+
+  function refresh(){
+    var d = collect();
+    [].forEach.call(linesEl.querySelectorAll('.line'), function(l, i){
+      l.querySelector('.line-idx').textContent = 'Service ' + String(i + 1).padStart(2, '0');
+      l.querySelector('.sym').textContent = SYM[d.currency];
+      l.querySelector('.line-del').style.display = linesEl.children.length > 1 ? '' : 'none';
+    });
+    $('sumName').textContent = d.client.name ? d.client.name + (d.client.company ? ', ' + d.client.company : '') : '—';
+    renderLines($('sumLines'), d.items, d.currency);
+    var total = d.items.reduce(function(s, it){ return s + (it.amount >= 1 ? it.amount : 0); }, 0);
+    $('sumTotal').textContent = fmt(total);
+    var p = problem(d);
+    btnBox.classList.toggle('is-locked', !!p);
+    hint.hidden = !p;
+    if (p) hint.textContent = config ? p : 'Loading secure checkout…';
+    return p;
+  }
+
+  /* ---------- PayPal ---------- */
+  function loadSdk(cur){
+    if (!config || cur === sdkCurrency) return;
+    sdkCurrency = cur;
+    if (buttons && buttons.close) buttons.close();
+    btnBox.innerHTML = '';
+    var old = document.getElementById('ppSdk'); if (old) old.remove();
+    delete window.paypal;
+    var s = document.createElement('script');
+    s.id = 'ppSdk';
+    s.src = 'https://www.paypal.com/sdk/js?client-id=' + encodeURIComponent(config.clientId) +
+            '&currency=' + cur + '&intent=capture&components=buttons&disable-funding=paylater';
+    s.onload = renderButtons;
+    s.onerror = function(){ show('err', 'Could not load PayPal. Please disable ad-blockers for this page and reload.'); };
+    document.head.appendChild(s);
+  }
+
+  function renderButtons(){
+    buttons = paypal.Buttons({
+      style: { layout: 'vertical', shape: 'rect', color: 'gold', label: 'pay', height: 46 },
+      onClick: function(data, actions){
+        var p = refresh();
+        if (p) { show('err', p); return actions.reject(); }
+        clearStatus(); return actions.resolve();
+      },
+      createOrder: function(){
+        return fetch('/api/paypal/create-order', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(collect())
+        }).then(function(r){ return r.json().then(function(j){
+          if (!r.ok) throw new Error(j.error || 'Could not start payment.');
+          form.dataset.invoice = j.invoice;
+          return j.id;
+        }); });
+      },
+      onApprove: function(data, actions){
+        show('ok', 'Confirming your payment…');
+        return fetch('/api/paypal/capture-order', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ orderID: data.orderID })
+        }).then(function(r){ return r.json().then(function(j){
+          if (j.restart) return actions.restart();
+          if (!r.ok) throw new Error(j.error || 'Payment could not be completed.');
+          success(j);
+        }); });
+      },
+      onCancel: function(){ show('err', 'Payment cancelled — nothing was charged. You can try again anytime.'); },
+      onError: function(err){ show('err', (err && err.message) || 'Something went wrong with PayPal. Please try again or email info@softweblab.net.'); }
+    });
+    buttons.render('#paypalButtons').then(refresh);
+  }
+
+  function success(res){
+    var d = collect();
+    var cur = (res.amount && res.amount.currency_code) || d.currency;
+    $('rName').textContent = d.client.name.split(' ')[0];
+    $('rInvoice').textContent = res.invoice || form.dataset.invoice || '—';
+    $('rTxn').textContent = res.captureId || res.orderId;
+    $('rDate').textContent = new Date(res.time || Date.now()).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+    $('rStatus').textContent = res.status === 'COMPLETED' ? 'Paid' : 'Pending review by PayPal';
+    renderLines($('rLines'), d.items, cur);
+    $('rTotal').textContent = fmt(res.amount ? res.amount.value : 0, cur);
+    if (res.status !== 'COMPLETED') $('rNote').textContent = 'PayPal is still reviewing this payment. We will email you as soon as it clears — usually within 24 hours.';
+
+    form.hidden = true; $('itin').hidden = true; $('receipt').hidden = false;
+    window.scrollTo({ top: document.querySelector('.shop-sec').offsetTop - 80, behavior: 'smooth' });
+
+    // Notify the SoftWebLab inbox (PayPal dashboard remains the source of truth).
+    var fd = new FormData();
+    fd.append('_subject', 'Payment received — ' + ($('rInvoice').textContent) + ' — ' + $('rTotal').textContent);
+    fd.append('name', d.client.name); fd.append('email', d.client.email);
+    fd.append('company', d.client.company); fd.append('phone', d.client.phone); fd.append('country', d.client.country);
+    fd.append('invoice', $('rInvoice').textContent); fd.append('paypal_transaction', $('rTxn').textContent);
+    fd.append('status', res.status); fd.append('total', $('rTotal').textContent); fd.append('reference', d.note);
+    fd.append('message', d.items.map(function(it){ return '• ' + it.service + (it.description ? ' — ' + it.description : '') + ': ' + fmt(it.amount, cur); }).join('\n'));
+    fetch(FORMSPREE, { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).catch(function(){});
+  }
+
+  /* ---------- boot ---------- */
+  var q = new URLSearchParams(location.search);
+  if (q.get('currency') && SYM[q.get('currency').toUpperCase()]) curSel.value = q.get('currency').toUpperCase();
+  ['name','email','company'].forEach(function(k){ if (q.get(k)) $('c' + k[0].toUpperCase() + k.slice(1)).value = q.get(k); });
+  if (q.get('ref')) $('cNote').value = q.get('ref');
+  var svc = q.getAll('service'), amt = q.getAll('amount'), dsc = q.getAll('desc');
+  var n = Math.max(svc.length, amt.length, 1);
+  for (var i = 0; i < n; i++) addLine({ service: SERVICES.indexOf(svc[i]) > -1 ? svc[i] : undefined, amount: amt[i], desc: dsc[i] });
+
+  $('addLine').addEventListener('click', function(){ addLine(); linesEl.lastChild.querySelector('.l-amount').focus(); });
+  form.addEventListener('input', refresh);
+  form.addEventListener('change', function(e){ refresh(); if (e.target === curSel) loadSdk(curSel.value); });
+  form.addEventListener('submit', function(e){ e.preventDefault(); });
+
+  fetch('/api/paypal/config').then(function(r){ return r.json().then(function(j){
+    if (!r.ok) throw new Error(j.error);
+    config = j;
+    if (j.env !== 'live') $('itinEnv').hidden = false;
+    loadSdk(curSel.value);
+  }); }).catch(function(){
+    hint.hidden = false;
+    hint.textContent = 'Online payment is temporarily unavailable. Please email info@softweblab.net for an invoice.';
+  });
+})();
+</script>
+</body>
+</html>
